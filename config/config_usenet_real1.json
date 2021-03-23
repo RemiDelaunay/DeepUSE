@@ -1,0 +1,52 @@
+{
+    "train_dataset_params": {
+        "dataset_name": "invivo",
+        "is_train":true,
+        "interframe":6,
+        "use_sequence": false,
+        "dataset_path": "/home/delaunay/pytorch/rf_data_invivo/",
+        "partition_path":"/home/delaunay/pytorch/DeepUSE/data_partition/invivo_training.csv",
+        "loader_params": {
+            "batch_size": 1,
+            "shuffle": true,
+            "num_workers": 16,
+            "pin_memory": true
+        }
+    },
+    "val_dataset_params": {
+        "dataset_name": "invivo",
+        "is_train":false,
+        "interframe":6,
+        "use_sequence": false,
+        "dataset_path": "/home/delaunay/pytorch/rf_data_invivo_test/",
+        "partition_path":"/home/delaunay/pytorch/DeepUSE/data_partition/invivo_test.csv",
+        "loader_params": {
+            "batch_size": 1,
+            "shuffle": false,
+            "num_workers": 4,
+            "pin_memory": true
+        }
+    },
+    "model_params": {
+        "model_name": "usenet",
+        "is_train": true,
+        "num_channel_initial":8,
+        "max_epochs": 300,
+        "lr": 0.001,
+        "export_path": "",
+        "checkpoint_path": "/home/delaunay/pytorch/DeepUSE/results/usenet_real1/",
+        "load_checkpoint": -1,
+        "lr_policy": "step",
+        "lr_decay_iters": 20,
+        "lr_gamma": 0.5,
+        "alpha": 3,
+        "beta": 0.0,
+        "corr_kernel": [9,9]
+    }, 
+    "visualization_params": {
+        "name": "usenet",
+        "log_path":"/home/delaunay/pytorch/DeepUSE/results/usenet_real1/"
+    },
+    "printout_freq": 1,
+    "model_update_freq": 50
+}

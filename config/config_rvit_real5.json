@@ -1,0 +1,56 @@
+{
+    "train_dataset_params": {
+        "dataset_name": "invivo",
+        "is_train":true,
+        "interframe":3,
+        "use_sequence": false,
+        "dataset_path": "/home/delaunay/pytorch/rf_data_invivo/",
+        "partition_path":"/home/delaunay/pytorch/DeepUSE/data_partition/invivo_training.csv",
+        "loader_params": {
+            "batch_size": 1,
+            "shuffle": true,
+            "num_workers": 16,
+            "pin_memory": true
+        }
+    },
+    "val_dataset_params": {
+        "dataset_name": "invivo",
+        "is_train":false,
+        "interframe":3,
+        "use_sequence": false,
+        "dataset_path": "/home/delaunay/pytorch/rf_data_invivo_test/",
+        "partition_path":"/home/delaunay/pytorch/DeepUSE/data_partition/invivo_test.csv",
+        "loader_params": {
+            "batch_size": 1,
+            "shuffle": false,
+            "num_workers": 4,
+            "pin_memory": true
+        }
+    },
+    "model_params": {
+        "model_name": "rvit",
+        "is_train": true,
+        "input_shape":[2,1600,128],
+        "patch_size": [16,16],
+        "depth":12,
+        "depth_lstm":2,
+        "hybrid":false,
+        "max_epochs": 100,
+        "lr": 0.001,
+        "export_path": "",
+        "checkpoint_path": "/home/delaunay/pytorch/DeepUSE/results/rvit_real/",
+        "load_checkpoint": -1,
+        "lr_policy": "step",
+        "lr_decay_iters": 30,
+        "lr_gamma": 0.5,
+        "alpha": 1,
+        "beta": 0.00,
+        "corr_kernel": [8,8]
+    }, 
+    "visualization_params": {
+        "name": "vit",
+        "log_path":"/home/delaunay/pytorch/DeepUSE/results/rvit_real/"
+    },
+    "printout_freq": 1,
+    "model_update_freq": 100
+}

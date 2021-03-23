@@ -1,0 +1,53 @@
+{
+    "train_dataset_params": {
+        "dataset_name": "invivo",
+        "is_train":true,
+        "interframe":6,
+        "use_sequence": true,
+        "dataset_path": "",
+        "partition_path":"/home/remi/DeepUSE/DeepUSE/data_partition/invivo_training.csv",
+        "loader_params": {
+            "batch_size": 3,
+            "shuffle": true,
+            "num_workers": 16,
+            "pin_memory": true
+        }
+    },
+    "val_dataset_params": {
+        "dataset_name": "invivo",
+        "is_train":false,
+        "interframe":6,
+        "use_sequence": false,
+        "dataset_path": "",
+        "partition_path":"/home/remi/DeepUSE/DeepUSE/data_partition/invivo_test.csv",
+        "loader_params": {
+            "batch_size": 1,
+            "shuffle": false,
+            "num_workers": 4,
+            "pin_memory": true
+        }
+    },
+    "model_params": {
+        "model_name": "ReUSENet",
+        "is_train": true,
+        "num_channel_initial":8,
+        "max_epochs": 300,
+        "lr": 0.001,
+        "export_path": "",
+        "checkpoint_path": "/home/remi/DeepUSE/DeepUSE/results/reusenet_real/",
+        "load_checkpoint": 300,
+        "lr_policy": "plateau",
+        "lr_decay_iters": 30,
+        "lr_gamma": 0.5,
+        "alpha": 5,
+        "beta": 0.1,
+        "corr_kernel": [8,8]
+    }, 
+    "visualization_params": {
+        "name": "reusenet",
+        "log_path":"/home/remi/DeepUSE/DeepUSE/results/reusenet_real/"
+    },
+    "printout_freq": 1,
+    "model_update_freq": 50,
+    "validation_freq": 10
+}

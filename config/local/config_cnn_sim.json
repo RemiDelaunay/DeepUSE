@@ -1,0 +1,55 @@
+{
+    "train_dataset_params": {
+        "dataset_name": "sim",
+        "use_sequence": false,
+        "load_all":false,
+        "three_channels": false,
+        "dataset_path": "/home/delaunay/pytorch/rf_data_sim/",
+        "partition_path":"/home/delaunay/pytorch/Elasto/data_partition/sim_training.csv",
+        "loader_params": {
+            "batch_size": 1,
+            "shuffle": true,
+            "num_workers": 16,
+            "pin_memory": true
+        }
+    },
+    "val_dataset_params": {
+        "dataset_name": "sim",
+        "use_sequence": false,
+        "load_all":true,
+        "three_channels": false,
+        "dataset_path": "/home/delaunay/pytorch/rf_data_sim/",
+        "partition_path":"/home/delaunay/pytorch/Elasto/data_partition/sim_validation.csv",
+        "loader_params": {
+            "batch_size": 1,
+            "shuffle": false,
+            "num_workers": 4,
+            "pin_memory": true
+        }
+    },
+    "model_params": {
+        "model_name": "cnn",
+        "is_train": true,
+        "use_consistency":false,
+        "use_compounding":true,
+        "num_channel_initial":12,
+        "max_epochs": 200,
+        "lr": 0.001,
+        "export_path": "",
+        "checkpoint_path": "/home/delaunay/pytorch/Elasto/results/cnn_sim/",
+        "load_checkpoint": 100,
+        "lr_policy": "step",
+        "lr_decay_iters": 20,
+        "lr_gamma": 0.5,
+        "alpha": 5,
+        "beta": 0.0,
+        "gamma": 0.0,
+        "corr_kernel": [25,25]
+    }, 
+    "visualization_params": {
+        "name": "cnn",
+        "log_path":"/home/delaunay/pytorch/Elasto/results/cnn_sim/"
+    },
+    "printout_freq": 1,
+    "model_update_freq": 10
+}
