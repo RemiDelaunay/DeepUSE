@@ -2,11 +2,7 @@
 
 This repository contains fine-tuning code and pre-trained models for the learning-based quasi-static ultrasound elastography method presented in "An unsupervised learning approach to ultrasound elastography with spatio-temporal consistency" [[1]][paper-link]. Please check our paper for more details and, should you be making use of this work, please cite the paper accordingly.
 
-<object data="https://github.com/RemiDelaunay/Media-example/raw/main/DeepUSE/method_overview.pdf" type="application/pdf" width="700px" height="700px">
-    <embed src="https://github.com/RemiDelaunay/Media-example/raw/main/DeepUSE/method_overview.pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="https://github.com/RemiDelaunay/Media-example/raw/main/DeepUSE/method_overview.pdf">Download PDF</a>.</p>
-    </embed>
-</object>
+![alt text](https://github.com/RemiDelaunay/Media-example/raw/main/DeepUSE/method_overview.png "Method overview")
 
 # Setup
 
@@ -20,11 +16,7 @@ To use PyTorch with CUDA, please check their [official website](www.pytorch.org)
 
 Two types of network architectures are available. USENet is a feedforward convolutional neural network derived from the U-Net and can be trained to estimate the displacement between a pair of ultrasound radio-frequency (RF) frames. ReUSENet is a recurrent neural network which make use of decoding convLSTM units to process time series ultrasound RF data.
 
-<object data="https://github.com/RemiDelaunay/Media-example/raw/main/DeepUSE/network_architecture.pdf" type="application/pdf" width="700px" height="700px">
-    <embed src="https://github.com/RemiDelaunay/Media-example/raw/main/DeepUSE/network_architecture.pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="https://github.com/RemiDelaunay/Media-example/raw/main/DeepUSE/network_architecture.pdf">Download PDF</a>.</p>
-    </embed>
-</object>
+![alt text](https://github.com/RemiDelaunay/Media-example/raw/main/DeepUSE/network_architecture.png "Network architecture")
 
 # Usage
 
