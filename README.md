@@ -2,7 +2,7 @@
 
 This repository contains fine-tuning code and pre-trained models for the learning-based quasi-static ultrasound elastography method presented in "An unsupervised learning approach to ultrasound elastography with spatio-temporal consistency" [[1]][paper-link]. Please check our paper for more details and, should you be making use of this work, please cite the paper accordingly.
 
-![alt text](https://github.com/YipengHu/example-data/raw/master/label-reg-demo/media/network_architecture.jpg "Overview of the method")
+![alt text](https://github.com/RemiDelaunay/Media-example/raw/master/DeepUSE/method_overview.pdf "Overview of the method")
 
 # Setup
 
@@ -16,7 +16,7 @@ To use PyTorch with CUDA, please check their [official website](www.pytorch.org)
 
 Two types of network architectures are available. USENet is a feedforward convolutional neural network derived from the U-Net and can be trained to estimate the displacement between a pair of ultrasound radio-frequency (RF) frames. ReUSENet is a recurrent neural network which make use of decoding convLSTM units to process time series ultrasound RF data.
 
-![alt text](https://github.com/YipengHu/example-data/raw/master/label-reg-demo/media/network_architecture.jpg "Networks architecture")
+![alt text](https://github.com/RemiDelaunay/Media-example/raw/master/DeepUSE/network_architecture.pdf "Networks architecture")
 
 # Usage
 
@@ -36,7 +36,7 @@ Pre-trained models of ReUSENet and USENet trained on both [numerical simulation]
 
 For real-time inference, please have a look at our [3D-slicer extension][slicer-module].
 
-![alt text](https://github.com/YipengHu/example-data/raw/master/label-reg-demo/media/network_architecture.jpg "Inference example")
+![alt text](https://github.com/RemiDelaunay/Media-example/raw/master/DeepUSE/SlicerDeepUSE.git "Inference example")
 
 # References
 
