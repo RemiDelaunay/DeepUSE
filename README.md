@@ -36,7 +36,7 @@ Pre-trained models of ReUSENet and USENet trained on both [numerical simulation]
 
 For real-time inference, please have a look at our [3D-slicer extension][slicer-module].
 
-![alt text](https://github.com/RemiDelaunay/Media-example/raw/master/DeepUSE/SlicerDeepUSE.git "Inference example")
+![alt text](https://github.com/RemiDelaunay/Media-example/raw/master/DeepUSE/SlicerDeepUSE.gif "Inference example")
 
 # References
 
