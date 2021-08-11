@@ -41,15 +41,13 @@ For real-time inference, please have a look at our [3D-slicer extension][slicer-
 # References
 
 ```
-[1]  @article{Delaunay2021,
-  title={An unsupervised learning approach to ultrasound elastography with spatio-temporal consistency},
-  author={Delaunay, R{\'e}mi and Hu, Yipeng and Vercauteren, Tom},
-  journal={},
-  volume={},
-  number={},
-  pages={},
-  year={2021},
-  publisher={}
+[1]  @article{10.1088/1361-6560/ac176a,
+	author={Delaunay, Rémi and Hu, Yipeng and Vercauteren, Tom},
+	title={An unsupervised learning approach to ultrasound strain elastography with spatio-temporal consistency},
+	journal={Physics in Medicine & Biology},
+	url={http://iopscience.iop.org/article/10.1088/1361-6560/ac176a},
+	year={2021},
+	abstract={Quasi-static ultrasound elastography is an imaging modality that measures deformation (i.e. strain) of tissue in response to an applied mechanical force. In ultrasound elastography, the strain modulus is traditionally obtained by deriving the displacement field estimated between a pair of radio-frequency data. In this work we propose a recurrent network architecture with convolutional Long-Short-Term Memory (convLSTM) decoder blocks to improve displacement estimation and spatio-temporal continuity between time series ultrasound frames. The network is trained in an unsupervised way, by optimising a similarity metric between the reference and compressed image. Our training loss is also composed of a regularisation term that preserves displacement continuity by directly optimising the strain smoothness, and a temporal continuity term that enforces consistency between successive strain predictions. In addition, we propose an open access in vivo database for quasi-static ultrasound elastography, which consists of radio-frequency data sequences captured on the arm of a human volunteer. Our results from numerical simulation and in vivo data suggest that our recurrent neural network can account for larger deformations, as compared with two other feed-forward neural networks. In all experiments, our recurrent network outperformed the state-of-the-art for both learning-based and optimisation-based methods, in terms of elastographic signal-to-noise ratio (SNRe), strain consistency, and image similarity. Finally, our open source code provides a 3D-slicer visualisation module that can be used to process ultrasound RF frames in real-time, at a rate of up to 20 frames per second, using a standard GPU.}
 }
 ```
 This PyTorch framework was inspired from: https://github.com/branislav1991/PyTorchProjectFramework
